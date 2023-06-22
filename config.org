@@ -403,3 +403,26 @@ hello world
  | mode-line-modes                 | Major and minor modes, in parenthesis; square brackets if RecursiveEdit    |
  | mode-line-misc-info             | Defun name for ‘which-function-mode’, clock for ‘display-time-mode’        |
  | mode-line-end-spaces            | A line of dashes for text terminals; nothing for graphics displays         |
+
+* Minibuffer
+** Minibuffer 也是 buffer
+
+buffer 中的许多操作也可以在 minibuffer 中使用
+
+换行 ~C-q C-j~
+
+** Minibuffer 不一定是 buffer
+
+当用于显示消息时, 其被称作 EchoArea.
+
+(message "call me echo area")
+
+** 自动补全
+
+IDO - Interactively DO things
+
+#+begin_src emacs-lisp
+  (setq ido-enable-flex-matching t)
+  (setq ido-everywhere t)
+  (ido-mode 1)
+#+end_src
