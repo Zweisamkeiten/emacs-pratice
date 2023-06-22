@@ -95,3 +95,11 @@ emacs 29 已经集成了 use-package
     (reapply-themes))
 #+end_src
 
+* 设置专门的 cutstom.el 来存放生成的配置文件
+
+让自动生成的配置放到专门的配置文件中, 防止污染 init.el
+
+#+begin_src emacs-lisp
+  (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+  (load custom-file)
+#+end_src

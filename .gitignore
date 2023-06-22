@@ -2,3 +2,4 @@ elpa
 straight
 config.el
 auto-save-list
+custom.el
