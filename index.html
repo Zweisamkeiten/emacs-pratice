@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-22 Thu 04:03 -->
+<!-- 2023-06-22 Thu 04:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,24 +245,30 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org335bfa2">默认折叠代码</a></li>
-<li><a href="#orga23ea99">打开配置文件</a></li>
-<li><a href="#orgb5b947e">重新加载配置</a></li>
-<li><a href="#orge0747d6">包管理</a></li>
-<li><a href="#org8764a03">主题</a></li>
-<li><a href="#org417caa7">切换主题</a></li>
+<li><a href="#org0cf34a9">默认折叠代码</a></li>
+<li><a href="#org2d85ee2">打开配置文件</a></li>
+<li><a href="#org29e29e0">重新加载配置</a></li>
+<li><a href="#org423beac">包管理</a></li>
+<li><a href="#org8fcd902">主题</a></li>
+<li><a href="#orgac7db46">切换主题</a></li>
+<li><a href="#org2b371ea">设置专门的 cutstom.el 来存放生成的配置文件</a></li>
+<li><a href="#orge18896f">使用 y or n 来回答</a></li>
+<li><a href="#org11af2d2">不要生成备份文件</a></li>
+<li><a href="#org7ac7f65">精简 UI, 扩大可视面积</a></li>
+<li><a href="#org8ff0886">自动恢复 buffer</a></li>
+<li><a href="#org95ad9c0">当退出时, 更友好的提示未保存的文件</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org335bfa2" class="outline-2">
-<h2 id="org335bfa2">默认折叠代码</h2>
-<div class="outline-text-2" id="text-org335bfa2">
+<div id="outline-container-org0cf34a9" class="outline-2">
+<h2 id="org0cf34a9">默认折叠代码</h2>
+<div class="outline-text-2" id="text-org0cf34a9">
 </div>
 </div>
 
-<div id="outline-container-orga23ea99" class="outline-2">
-<h2 id="orga23ea99">打开配置文件</h2>
-<div class="outline-text-2" id="text-orga23ea99">
+<div id="outline-container-org2d85ee2" class="outline-2">
+<h2 id="org2d85ee2">打开配置文件</h2>
+<div class="outline-text-2" id="text-org2d85ee2">
 <p>
 C-c I<br />
 </p>
@@ -278,9 +284,9 @@ C-c I<br />
 </div>
 </div>
 
-<div id="outline-container-orgb5b947e" class="outline-2">
-<h2 id="orgb5b947e">重新加载配置</h2>
-<div class="outline-text-2" id="text-orgb5b947e">
+<div id="outline-container-org29e29e0" class="outline-2">
+<h2 id="org29e29e0">重新加载配置</h2>
+<div class="outline-text-2" id="text-org29e29e0">
 <p>
 C-c R<br />
 </p>
@@ -297,9 +303,9 @@ C-c R<br />
 </div>
 </div>
 
-<div id="outline-container-orge0747d6" class="outline-2">
-<h2 id="orge0747d6">包管理</h2>
-<div class="outline-text-2" id="text-orge0747d6">
+<div id="outline-container-org423beac" class="outline-2">
+<h2 id="org423beac">包管理</h2>
+<div class="outline-text-2" id="text-org423beac">
 <p>
 emacs 29 已经集成了 use-package<br />
 </p>
@@ -339,9 +345,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org8764a03" class="outline-2">
-<h2 id="org8764a03">主题</h2>
-<div class="outline-text-2" id="text-org8764a03">
+<div id="outline-container-org8fcd902" class="outline-2">
+<h2 id="org8fcd902">主题</h2>
+<div class="outline-text-2" id="text-org8fcd902">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package kaolin-themes
   :straight t)
@@ -350,9 +356,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org417caa7" class="outline-2">
-<h2 id="org417caa7">切换主题</h2>
-<div class="outline-text-2" id="text-org417caa7">
+<div id="outline-container-orgac7db46" class="outline-2">
+<h2 id="orgac7db46">切换主题</h2>
+<div class="outline-text-2" id="text-orgac7db46">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(setq-default custom-enabled-themes '(kaolin-light))
 
@@ -381,9 +387,122 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 </div>
+
+<div id="outline-container-org2b371ea" class="outline-2">
+<h2 id="org2b371ea">设置专门的 cutstom.el 来存放生成的配置文件</h2>
+<div class="outline-text-2" id="text-org2b371ea">
+<p>
+让自动生成的配置放到专门的配置文件中, 防止污染 init.el<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge18896f" class="outline-2">
+<h2 id="orge18896f">使用 y or n 来回答</h2>
+<div class="outline-text-2" id="text-orge18896f">
+<p>
+默认是 yes or no 来表示 确认/取消.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default use-short-answers t)
+</pre>
+</div>
+
+<p>
+注意较老版本 emacs, 是 `(defalias 'yes-or-no-p 'y-or-n-p)`<br />
+</p>
+
+<p>
+这也是用例文档驱动的好处, 需求是不变的, 但是实现(配置代码)会变.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11af2d2" class="outline-2">
+<h2 id="org11af2d2">不要生成备份文件</h2>
+<div class="outline-text-2" id="text-org11af2d2">
+<p>
+emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
+</p>
+
+<p>
+一般的本地版本控制和 undo 机制已经足够<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq make-backup-file nil)
+(setq auto-save-default nil)
+(setq backup-inhibited t)
+(setq backup-directory-alist `(("." . "~/.cache/.saves")))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7ac7f65" class="outline-2">
+<h2 id="org7ac7f65">精简 UI, 扩大可视面积</h2>
+<div class="outline-text-2" id="text-org7ac7f65">
+<p>
+不要工具栏, 不要滚动条, 不要菜单栏<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8ff0886" class="outline-2">
+<h2 id="org8ff0886">自动恢复 buffer</h2>
+<div class="outline-text-2" id="text-org8ff0886">
+<p>
+现代化的文本编辑器在检测到文件因为别的原因被修改时都会进行同步.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-auto-revert-mode t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org95ad9c0" class="outline-2">
+<h2 id="org95ad9c0">当退出时, 更友好的提示未保存的文件</h2>
+<div class="outline-text-2" id="text-org95ad9c0">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun clean-exit ()
+  "Exit Emacs cleanly. If there are unsaved buffer, pop up a list for them to be saved before existing.
+Replaces 'save-buffers-kill-terminal'."
+  (interactive)
+  (if (frame-parameter nil 'client)
+      (server-save-buffers-kill-terminal arg)
+    (if-let ((buf-list (seq-filter (lambda (buf)
+				     (and (buffer-modified-p buf)
+					  (buffer-file-name buf)))
+				   (buffer-list))))
+	(progn
+	  (pop-to-buffer (list-buffers-noselect t buf-list))
+	  (message "s to save, C-k to kill, x to execute"))
+      (save-buffers-kill-emacs))))
+
+(global-set-key (kbd "C-x C-c") 'clean-exit)
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-06-22 Thu 04:03</p>
+<p class="date">Created: 2023-06-22 Thu 04:45</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
