@@ -103,3 +103,15 @@ emacs 29 已经集成了 use-package
   (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
   (load custom-file)
 #+end_src
+
+* 使用 y or n 来回答
+
+默认是 yes or no 来表示 确认/取消.
+
+#+begin_src emacs-lisp
+  (setq-default use-short-answers t)
+#+end_src
+
+注意较老版本 emacs, 是 `(defalias 'yes-or-no-p 'y-or-n-p)`
+
+这也是用例文档驱动的好处, 需求是不变的, 但是实现(配置代码)会变.
