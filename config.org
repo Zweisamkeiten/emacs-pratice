@@ -347,3 +347,59 @@ hello world
 ~C-x 8 C-h~
 ~C-x 8 RET~
 👨
+
+* 自定义 modeline
+
+保留了一部分常用的信息 (buffer 名称, 版本控制信息, 是否只读, 是否被编辑过)
+
+#+begin_src emacs-lisp
+  (setq mode-line-format
+     '("%e"
+       mode-line-front-space
+       (:propertize
+	(""
+	 mode-line-mule-info
+	 mode-line-client
+	 mode-line-modified
+	 mode-line-remote)
+	display
+	(min-width
+	 (5.0)))
+       mode-line-frame-identification
+       mode-line-buffer-identification
+       "   "
+       mode-line-position
+       (vc-mode vc-mode)
+       "  "
+       mode-line-modes
+       mode-line-misc-info
+       mode-line-end-spaces
+       ))
+#+end_src
+
+还加上了可爱的彩虹猫咪来显示光标在 buffer 中的大概位置。
+
+#+begin_src emacs-lisp
+  (use-package nyan-mode
+    :init
+    (setq nyan-animate-nyancat t)
+    (setq nyan-wavy-trail t)
+    (setq nyan-minimum-window-width 80)
+    (setq nyan-bar-length 20)
+    (nyan-mode))
+#+end_src
+
+
+** 常见函数
+
+ | mode-line-front-space           | Dash (-) for text terminals, a space ( ) for graphic displays              |
+ | mode-line-mule-info             | Information on character sets, encodings, and other human-language details |
+ | mode-line-client                | Identifies frames created by emacsclient                                   |
+ | mode-line-modified              | Modified and read-only status                                              |
+ | mode-line-remote                | At-sign (@) for buffers visiting remote files, otherwise a dash            |
+ | mode-line-frame-identification  | Frame title, for some environments                                         |
+ | mode-line-buffer-identification | Buffer/file name                                                           |
+ | mode-line-position              | Line, column, and portion (percent) of point in buffer; total size         |
+ | mode-line-modes                 | Major and minor modes, in parenthesis; square brackets if RecursiveEdit    |
+ | mode-line-misc-info             | Defun name for ‘which-function-mode’, clock for ‘display-time-mode’        |
+ | mode-line-end-spaces            | A line of dashes for text terminals; nothing for graphics displays         |
