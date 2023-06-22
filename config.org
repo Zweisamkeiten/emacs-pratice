@@ -12,7 +12,7 @@ C-c I
   (defun find-config ()
     "Edit config.org"
     (interactive)
-    (find-file "~/p/emacs/config.org"))
+    (find-file "~/p/pratice-emacs/config.org"))
   (global-set-key (kbd "C-c I") 'find-config)
 #+end_src
 
@@ -24,8 +24,8 @@ C-c R
   (defun reload-config ()
     "Reload config"
     (interactive)
-    (delete-file "~/p/emacs/config.el")
-    (org-babel-load-file (expand-file-name "~/p/emacs/config.org")))
+    (delete-file "~/p/pratice-emacs/config.el")
+    (org-babel-load-file (expand-file-name "~/p/pratice-emacs/config.org")))
   (global-set-key (kbd "C-c R") 'reload-config)
 #+end_src
 

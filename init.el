@@ -3,4 +3,4 @@
   (interactive)
   (message "Hello World"))
 
-(org-babel-load-file "~/p/emacs/config.org")
+(org-babel-load-file "~/p/pratice-emacs/config.org")
