@@ -128,3 +128,13 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件
   (setq backup-inhibited t)
   (setq backup-directory-alist `(("." . "~/.cache/.saves")))
 #+end_src
+
+* 精简 UI, 扩大可视面积
+
+不要工具栏, 不要滚动条, 不要菜单栏
+
+#+begin_src emacs-lisp
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (menu-bar-mode -1)
+#+end_src
