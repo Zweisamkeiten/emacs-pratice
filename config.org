@@ -167,3 +167,59 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件
 
   (global-set-key (kbd "C-x C-c") 'clean-exit)
 #+end_src
+
+* 在新的 frame 中打开待办事项列表文件
+
+#+begin_src emacs-lisp
+  (defun find-todo-list()
+    "Open todo.org in other frame"
+    (interactive)
+    (if (not (equal (buffer-file-name) (file-truename "~/e/todo.org")))
+	(find-file-other-frame "~/e/todo.org")))
+
+  (global-set-key (kbd "C-c t") 'find-todo-list)
+#+end_src
+
+* 打开(长)文件并左右分屏显示并启用 follow mode
+
+#+begin_src emacs-lisp
+  (defun find-file-side-by-side()
+    "Open file side by side with follow mode enabled"
+    (interactive)
+    (setq filename (read-file-name "Choose a file: "))
+    (message "Selected file: %s" filename)
+    (find-file filename)
+    (split-window-horizontally)
+    (follow-mode))
+
+  (global-set-key (kbd "C-c s") 'find-file-side-by-side)
+#+end_src
+
+* 打开并监控 zsh shell 的操作历史
+
+#+begin_src emacs-lisp
+  (defun tail-zsh-history()
+    "tail zsh history log"
+    (interactive)
+    (find-file "~/.local/state/zsh/.histfile")
+    (end-of-buffer)
+    (auto-revert-tail-mode))
+#+end_src
+
+* 打开 buffer 内容中指向的文件
+~find-file-at-point~
+e.g ~/.local/state/zsh/.histfile
+
+* 打开剪切板的内容并将其作为路径
+
+#+begin_src emacs-lisp
+  (defun find-file-at-clipboard()
+    "Find file at clipboard path."
+    (interactive)
+    (with-temp-buffer
+      (clipboard-yank)
+      (find-file-at-point)))
+
+  (global-set-key (kbd "C-c f") 'find-file-at-clipboard)
+#+end_src
+
