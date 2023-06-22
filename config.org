@@ -172,12 +172,12 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件
 
 * 打开文件
 ** 选定文件并打开
-|-----------+-------------------------------------|
-| C-x C-f   | 当前窗口打开文件                       |
-| C-x 4 f   | 在其他窗口打开文件                     |
-| C-x 4 C-o | 在其他窗口显示一个 buffer              |
+|-----------+------------------------------------------|
+| C-x C-f   | 当前窗口打开文件                         |
+| C-x 4 f   | 在其他窗口打开文件                       |
+| C-x 4 C-o | 在其他窗口显示一个 buffer                |
 | C-x 4 b   | 切换另一个窗口的 buffer 并且激活那个窗口 |
-| C-x 5 f   | 在新 frame 中打开文件                  |
+| C-x 5 f   | 在新 frame 中打开文件                    |
 | C-x C-r   | 在当前窗口以只读形式打开文件             |
 | C-x 4 r   | 在其他窗口以只读形式打开文件             |
 
@@ -312,9 +312,9 @@ e.g ~/.local/state/zsh/.histfile
 
 * 设置标记
 
-| C-SPC       | 然后移动光标    |
-| shift + 移动 | 自动 mark      |
-| C-x         | 选定整个 buffer |
+| C-SPC        | 然后移动光标    |
+| shift + 移动 | 自动 mark       |
+| C-x          | 选定整个 buffer |
 
 * 编辑内容
 + 直接输入内容
@@ -662,4 +662,20 @@ ddd eee fff
 | 机箱 | 白色   |  156 |
 | 总价 |        | 5995 |
 
+
+*** 中文对齐问题
+
+#+begin_src emacs-lisp
+  (when (display-graphic-p)
+    (when (eq system-type 'gnu/linux)
+      (setq fonts '("Inconsolata Nerd Font" "LXGW WenKai"))
+      (set-face-attribute 'default nil :font
+			  (format "%s:pixelsize=%d" (car fonts) 32))
+      (setq face-font-rescale-alist '(("LXGW WenKai". 1.0))))
+
+    (dolist (charset '(kana han symbol cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font) charset
+			(font-spec :family (car (cdr fonts)))))
+    )
+#+end_src
 
