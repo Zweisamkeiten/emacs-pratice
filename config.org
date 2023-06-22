@@ -70,7 +70,7 @@ emacs 29 已经集成了 use-package
 
 * 切换主题
 #+begin_src emacs-lisp
-  (setq-default custom-enabled-themes '(kaolin-light))
+  (setq-default custom-enabled-themes '(kaolin-galaxy))
 
   (defun reapply-themes ()
     "Forcibly load the themes listed in `custom-enabled-themes'."
@@ -91,7 +91,7 @@ emacs 29 已经集成了 use-package
   (defun theme-dark ()
     "Activate a dark color theme."
     (interactive)
-    (setq custom-enabled-themes '(kaolin-dark))
+    (setq custom-enabled-themes '(kaolin-galaxy))
     (reapply-themes))
 #+end_src
 
