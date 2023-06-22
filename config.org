@@ -679,3 +679,119 @@ ddd eee fff
     )
 #+end_src
 
+* 代码块
+** 代码块结构
+
+#+begin_comment
+#+NAME: <name>
+#+BEGIN_SRC <language> <switches> <header arguments>
+<body>
+#+END_SRC
+#+end_comment
+
+** 设置可以执行的编程语言
+
+#+begin_src emacs-lisp
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)
+     (C . t)
+     (ruby . t)
+     ))
+#+end_src
+
+~C-c C-c~ 执行代码块
+#+begin_src C
+  #include <stdio.h>
+  int main() {
+    printf("Hello, world!\n");
+    return 0;
+  }
+#+end_src
+
+#+RESULTS:
+| Hello | world! |
+
+#+begin_src python :results output
+  print("hello world")
+#+end_src
+
+#+RESULTS:
+: hello world
+
+#+begin_src ruby :var hello_name="Peter"
+  def hello(name)
+    "nice to meet you #{name}"
+  end
+
+  hello(hello_name)
+#+end_src
+
+#+RESULTS:
+: nice to meet you Peter
+
+#+NAME: sayHi
+#+begin_src ruby :var name="Peter"
+  def sayHi(name)
+    "hello #{name}"
+  end
+
+  sayHi(name)
+#+end_src
+
+#+RESULTS: sayHi
+: hello Peter
+
+#+NAME: introduce
+#+begin_src ruby :var target=sayHi(name="Tom") my_name="Jerry"
+"#{target}, my name is #{my_name}"
+#+end_src
+
+#+RESULTS: introduce
+: hello Tom, my name is Jerry
+
+** 提取源代码到指定文件
+
+将 org 文件中的代码块导出到单独的源文件中
+
+~C-c C-v t (org-babel-tangle)~ 提取全部的代码块
+
+~C-c C-v C-t (org-babel-tangle-single-block)~ 提取当前代码块
+
+#+begin_src ruby :tangle abc1.rb
+  puts("Hello, world!")
+#+end_src
+
+#+RESULTS:
+: nil
+
+** 多个代码块 tanagle 到同一个文件
+
+*** 直接合并
+
+追加
+
+#+begin_src ruby :tangle jkl.rb
+  puts("Hello, world!")
+#+end_src
+
+#+begin_src ruby :tangle jkl.rb
+  puts("Goodleby, world!")
+#+end_src
+
+*** 使用 noweb 来实现嵌套
+
+#+NAME: goodbye
+#+begin_src ruby :noweb yes
+  puts("Goodbye, world!")
+#+end_src
+
+#+begin_src ruby :noweb yes :tangle asd.rb
+  def two_step
+    puts("Hello, world!")
+    <<goodbye>>
+  end
+#+end_src
+
+#+RESULTS:
+: :two_step
