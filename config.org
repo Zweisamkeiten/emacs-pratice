@@ -1,8 +1,8 @@
 * 默认折叠代码
 
-#+OPTIONS: num:nil \n:t
-#+STARTUP: nofold
-#+STARTUP: hideblocks
+#+OPTIONS: num:nil \n:t ;; 导出文档时是否显示章节编号
+#+STARTUP: nofold ;; 打开文档时是否折叠大纲
+#+STARTUP: hideblocks ;; 打开文档时是否隐藏代码块
 
 * 打开配置文件
 
@@ -27,5 +27,71 @@ C-c R
     (delete-file "~/p/emacs/config.el")
     (org-babel-load-file (expand-file-name "~/p/emacs/config.org")))
   (global-set-key (kbd "C-c R") 'reload-config)
+#+end_src
+
+* 包管理
+
+emacs 29 已经集成了 use-package
+#+begin_src emacs-lisp
+  ;; (use-package avy)
+  ;; (use-package avy :ensure t)
+#+end_src
+
+缺点: 不够灵活, 只能安装指定源的固定版本的包
+
+#+begin_src emacs-lisp
+  (defvar bootstrap-version)
+  (let ((bootstrap-file
+	 (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+	(bootstrap-version 6))
+    (unless (file-exists-p bootstrap-file)
+      (with-current-buffer
+	  (url-retrieve-synchronously
+	   "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+	   'silent 'inhibit-cookies)
+	(goto-char (point-max))
+	(eval-print-last-sexp)))
+    (load bootstrap-file nil 'nomessage))
+  ;;; Integration with use-package
+  (straight-use-package 'use-package)
+
+  (setq straight-use-package-by-default t)
+  (setq straight-vc-git-default-clone-depth 1)
+
+  (use-package beacon
+    :straight t)
+#+end_src
+
+* 主题
+#+begin_src emacs-lisp
+  (use-package kaolin-themes
+    :straight t)
+#+end_src
+
+* 切换主题
+#+begin_src emacs-lisp
+  (setq-default custom-enabled-themes '(kaolin-light))
+
+  (defun reapply-themes ()
+    "Forcibly load the themes listed in `custom-enabled-themes'."
+    (dolist (theme custom-enabled-themes)
+      (unless (custom-theme-p theme)
+	(disable-theme theme)
+	(load-theme theme)))
+    (custom-set-variables `(custom-enabled-themes (quote , custom-enabled-themes))))
+
+  (add-hook 'after-init-hook 'reapply-themes)
+
+  (defun theme-light ()
+    "Activate a light color theme."
+    (interactive)
+    (setq custom-enabled-themes '(kaolin-light))
+    (reapply-themes))
+
+  (defun theme-dark ()
+    "Activate a dark color theme."
+    (interactive)
+    (setq custom-enabled-themes '(kaolin-dark))
+    (reapply-themes))
 #+end_src
 
