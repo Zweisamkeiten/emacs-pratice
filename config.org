@@ -426,3 +426,72 @@ IDO - Interactively DO things
   (setq ido-everywhere t)
   (ido-mode 1)
 #+end_src
+
+* BDD
+Behavior-driven development  行为驱动开发
+
+** Emacs lisp 中的 BDD
++ ecukes https://github.com/ecukes/ecukes
++ espuds https://github.com/ecukes/espuds
++ eask   https://github.com/emacs-eask
+
+** 配置环境
+
+*** 安装 eask
+#+begin_src shell
+  yarn global add emacs-eask/cli
+#+end_src
+*** 初始化 eask
+#+begin_src shell
+  eask init
+#+end_src
+
+*** 添加 ecukes 和 espuds 的依赖
+
+#+begin_comment
+(package "pratice-emacs"
+"1.0.0"
+"Document Driven Development")
+
+(website-url "https://zweisamkeiten.github.io/emacs-pratice/")
+(keywords "bdd")
+
+(files "pratice-emacs.el")
+
+(script "test" "echo \"Error: no test specified\" && exit 1")
+
+(source "gnu")
+(source "melpa")
+
+(depends-on "emacs" "30.0")
+(depends-on "ecukes")
+(depends-on "espuds")
+#+end_comment
+
+*** 初始化测试文件
+
+#+begin_src shell
+  eask exec ecukes new
+#+end_src
+
+** 编写测试和定义步骤
+
+*** 编写测试
+#+begin_src feature
+Feature: Emacs
+
+  Scenario: OpenConfigFile
+    Given I am in buffer "*scratch*"
+    When I press "C-c I"
+    Then I should be in buffer "config.org"
+#+end_src
+
+*** 定义步骤
+https://github.com/ecukes/espuds/blob/master/espuds.el#L131-L143
+
+https://github.com/ecukes/espuds/blob/master/espuds.el#L290-L291
+
+*** 执行测试
+#+begin_src shell
+  eask run test
+#+end_src
