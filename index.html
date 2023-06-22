@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-22 Thu 03:33 -->
+<!-- 2023-06-22 Thu 04:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,21 +245,24 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org46236a7">默认折叠代码</a></li>
-<li><a href="#org953691c">打开配置文件</a></li>
-<li><a href="#orgb9c3d25">重新加载配置</a></li>
+<li><a href="#org335bfa2">默认折叠代码</a></li>
+<li><a href="#orga23ea99">打开配置文件</a></li>
+<li><a href="#orgb5b947e">重新加载配置</a></li>
+<li><a href="#orge0747d6">包管理</a></li>
+<li><a href="#org8764a03">主题</a></li>
+<li><a href="#org417caa7">切换主题</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org46236a7" class="outline-2">
-<h2 id="org46236a7">默认折叠代码</h2>
-<div class="outline-text-2" id="text-org46236a7">
+<div id="outline-container-org335bfa2" class="outline-2">
+<h2 id="org335bfa2">默认折叠代码</h2>
+<div class="outline-text-2" id="text-org335bfa2">
 </div>
 </div>
 
-<div id="outline-container-org953691c" class="outline-2">
-<h2 id="org953691c">打开配置文件</h2>
-<div class="outline-text-2" id="text-org953691c">
+<div id="outline-container-orga23ea99" class="outline-2">
+<h2 id="orga23ea99">打开配置文件</h2>
+<div class="outline-text-2" id="text-orga23ea99">
 <p>
 C-c I<br />
 </p>
@@ -275,9 +278,9 @@ C-c I<br />
 </div>
 </div>
 
-<div id="outline-container-orgb9c3d25" class="outline-2">
-<h2 id="orgb9c3d25">重新加载配置</h2>
-<div class="outline-text-2" id="text-orgb9c3d25">
+<div id="outline-container-orgb5b947e" class="outline-2">
+<h2 id="orgb5b947e">重新加载配置</h2>
+<div class="outline-text-2" id="text-orgb5b947e">
 <p>
 C-c R<br />
 </p>
@@ -293,9 +296,94 @@ C-c R<br />
 </div>
 </div>
 </div>
+
+<div id="outline-container-orge0747d6" class="outline-2">
+<h2 id="orge0747d6">包管理</h2>
+<div class="outline-text-2" id="text-orge0747d6">
+<p>
+emacs 29 已经集成了 use-package<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (use-package avy)
+;; (use-package avy :ensure t)
+</pre>
+</div>
+
+<p>
+缺点: 不够灵活, 只能安装指定源的固定版本的包<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+	(url-retrieve-synchronously
+	 "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+	 'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+;;; Integration with use-package
+(straight-use-package 'use-package)
+
+(setq straight-use-package-by-default t)
+(setq straight-vc-git-default-clone-depth 1)
+
+(use-package beacon
+  :straight t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8764a03" class="outline-2">
+<h2 id="org8764a03">主题</h2>
+<div class="outline-text-2" id="text-org8764a03">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package kaolin-themes
+  :straight t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org417caa7" class="outline-2">
+<h2 id="org417caa7">切换主题</h2>
+<div class="outline-text-2" id="text-org417caa7">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default custom-enabled-themes '(kaolin-light))
+
+(defun reapply-themes ()
+  "Forcibly load the themes listed in `custom-enabled-themes'."
+  (dolist (theme custom-enabled-themes)
+    (unless (custom-theme-p theme)
+      (disable-theme theme)
+      (load-theme theme)))
+  (custom-set-variables `(custom-enabled-themes (quote , custom-enabled-themes))))
+
+(add-hook 'after-init-hook 'reapply-themes)
+
+(defun theme-light ()
+  "Activate a light color theme."
+  (interactive)
+  (setq custom-enabled-themes '(kaolin-light))
+  (reapply-themes))
+
+(defun theme-dark ()
+  "Activate a dark color theme."
+  (interactive)
+  (setq custom-enabled-themes '(kaolin-dark))
+  (reapply-themes))
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-06-22 Thu 03:33</p>
+<p class="date">Created: 2023-06-22 Thu 04:03</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
