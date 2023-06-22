@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-22 Thu 04:45 -->
+<!-- 2023-06-22 Thu 07:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,30 +245,35 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0cf34a9">默认折叠代码</a></li>
-<li><a href="#org2d85ee2">打开配置文件</a></li>
-<li><a href="#org29e29e0">重新加载配置</a></li>
-<li><a href="#org423beac">包管理</a></li>
-<li><a href="#org8fcd902">主题</a></li>
-<li><a href="#orgac7db46">切换主题</a></li>
-<li><a href="#org2b371ea">设置专门的 cutstom.el 来存放生成的配置文件</a></li>
-<li><a href="#orge18896f">使用 y or n 来回答</a></li>
-<li><a href="#org11af2d2">不要生成备份文件</a></li>
-<li><a href="#org7ac7f65">精简 UI, 扩大可视面积</a></li>
-<li><a href="#org8ff0886">自动恢复 buffer</a></li>
-<li><a href="#org95ad9c0">当退出时, 更友好的提示未保存的文件</a></li>
+<li><a href="#org138b0af">默认折叠代码</a></li>
+<li><a href="#org142d71d">打开配置文件</a></li>
+<li><a href="#org2a5c809">重新加载配置</a></li>
+<li><a href="#org81278a5">包管理</a></li>
+<li><a href="#org8d230a8">主题</a></li>
+<li><a href="#orgdcdcbe0">切换主题</a></li>
+<li><a href="#org8a30577">设置专门的 cutstom.el 来存放生成的配置文件</a></li>
+<li><a href="#org3bfe087">使用 y or n 来回答</a></li>
+<li><a href="#org55ac68b">不要生成备份文件</a></li>
+<li><a href="#org068dda6">精简 UI, 扩大可视面积</a></li>
+<li><a href="#orgcb2785d">自动恢复 buffer</a></li>
+<li><a href="#org9c40179">当退出时, 更友好的提示未保存的文件</a></li>
+<li><a href="#org25f261e">在新的 frame 中打开待办事项列表文件</a></li>
+<li><a href="#org1361376">打开(长)文件并左右分屏显示并启用 follow mode</a></li>
+<li><a href="#orge77735b">打开并监控 zsh shell 的操作历史</a></li>
+<li><a href="#org14dda09">打开 buffer 内容中指向的文件</a></li>
+<li><a href="#org774590d">打开剪切板的内容并将其作为路径</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0cf34a9" class="outline-2">
-<h2 id="org0cf34a9">默认折叠代码</h2>
-<div class="outline-text-2" id="text-org0cf34a9">
+<div id="outline-container-org138b0af" class="outline-2">
+<h2 id="org138b0af">默认折叠代码</h2>
+<div class="outline-text-2" id="text-org138b0af">
 </div>
 </div>
 
-<div id="outline-container-org2d85ee2" class="outline-2">
-<h2 id="org2d85ee2">打开配置文件</h2>
-<div class="outline-text-2" id="text-org2d85ee2">
+<div id="outline-container-org142d71d" class="outline-2">
+<h2 id="org142d71d">打开配置文件</h2>
+<div class="outline-text-2" id="text-org142d71d">
 <p>
 C-c I<br />
 </p>
@@ -284,9 +289,9 @@ C-c I<br />
 </div>
 </div>
 
-<div id="outline-container-org29e29e0" class="outline-2">
-<h2 id="org29e29e0">重新加载配置</h2>
-<div class="outline-text-2" id="text-org29e29e0">
+<div id="outline-container-org2a5c809" class="outline-2">
+<h2 id="org2a5c809">重新加载配置</h2>
+<div class="outline-text-2" id="text-org2a5c809">
 <p>
 C-c R<br />
 </p>
@@ -303,9 +308,9 @@ C-c R<br />
 </div>
 </div>
 
-<div id="outline-container-org423beac" class="outline-2">
-<h2 id="org423beac">包管理</h2>
-<div class="outline-text-2" id="text-org423beac">
+<div id="outline-container-org81278a5" class="outline-2">
+<h2 id="org81278a5">包管理</h2>
+<div class="outline-text-2" id="text-org81278a5">
 <p>
 emacs 29 已经集成了 use-package<br />
 </p>
@@ -345,9 +350,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org8fcd902" class="outline-2">
-<h2 id="org8fcd902">主题</h2>
-<div class="outline-text-2" id="text-org8fcd902">
+<div id="outline-container-org8d230a8" class="outline-2">
+<h2 id="org8d230a8">主题</h2>
+<div class="outline-text-2" id="text-org8d230a8">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package kaolin-themes
   :straight t)
@@ -356,9 +361,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-orgac7db46" class="outline-2">
-<h2 id="orgac7db46">切换主题</h2>
-<div class="outline-text-2" id="text-orgac7db46">
+<div id="outline-container-orgdcdcbe0" class="outline-2">
+<h2 id="orgdcdcbe0">切换主题</h2>
+<div class="outline-text-2" id="text-orgdcdcbe0">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(setq-default custom-enabled-themes '(kaolin-light))
 
@@ -388,9 +393,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org2b371ea" class="outline-2">
-<h2 id="org2b371ea">设置专门的 cutstom.el 来存放生成的配置文件</h2>
-<div class="outline-text-2" id="text-org2b371ea">
+<div id="outline-container-org8a30577" class="outline-2">
+<h2 id="org8a30577">设置专门的 cutstom.el 来存放生成的配置文件</h2>
+<div class="outline-text-2" id="text-org8a30577">
 <p>
 让自动生成的配置放到专门的配置文件中, 防止污染 init.el<br />
 </p>
@@ -403,9 +408,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-orge18896f" class="outline-2">
-<h2 id="orge18896f">使用 y or n 来回答</h2>
-<div class="outline-text-2" id="text-orge18896f">
+<div id="outline-container-org3bfe087" class="outline-2">
+<h2 id="org3bfe087">使用 y or n 来回答</h2>
+<div class="outline-text-2" id="text-org3bfe087">
 <p>
 默认是 yes or no 来表示 确认/取消.<br />
 </p>
@@ -425,9 +430,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org11af2d2" class="outline-2">
-<h2 id="org11af2d2">不要生成备份文件</h2>
-<div class="outline-text-2" id="text-org11af2d2">
+<div id="outline-container-org55ac68b" class="outline-2">
+<h2 id="org55ac68b">不要生成备份文件</h2>
+<div class="outline-text-2" id="text-org55ac68b">
 <p>
 emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </p>
@@ -446,9 +451,9 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </div>
 </div>
 
-<div id="outline-container-org7ac7f65" class="outline-2">
-<h2 id="org7ac7f65">精简 UI, 扩大可视面积</h2>
-<div class="outline-text-2" id="text-org7ac7f65">
+<div id="outline-container-org068dda6" class="outline-2">
+<h2 id="org068dda6">精简 UI, 扩大可视面积</h2>
+<div class="outline-text-2" id="text-org068dda6">
 <p>
 不要工具栏, 不要滚动条, 不要菜单栏<br />
 </p>
@@ -462,9 +467,9 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </div>
 </div>
 
-<div id="outline-container-org8ff0886" class="outline-2">
-<h2 id="org8ff0886">自动恢复 buffer</h2>
-<div class="outline-text-2" id="text-org8ff0886">
+<div id="outline-container-orgcb2785d" class="outline-2">
+<h2 id="orgcb2785d">自动恢复 buffer</h2>
+<div class="outline-text-2" id="text-orgcb2785d">
 <p>
 现代化的文本编辑器在检测到文件因为别的原因被修改时都会进行同步.<br />
 </p>
@@ -476,9 +481,9 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </div>
 </div>
 
-<div id="outline-container-org95ad9c0" class="outline-2">
-<h2 id="org95ad9c0">当退出时, 更友好的提示未保存的文件</h2>
-<div class="outline-text-2" id="text-org95ad9c0">
+<div id="outline-container-org9c40179" class="outline-2">
+<h2 id="org9c40179">当退出时, 更友好的提示未保存的文件</h2>
+<div class="outline-text-2" id="text-org9c40179">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun clean-exit ()
   "Exit Emacs cleanly. If there are unsaved buffer, pop up a list for them to be saved before existing.
@@ -500,9 +505,86 @@ Replaces 'save-buffers-kill-terminal'."
 </div>
 </div>
 </div>
+
+<div id="outline-container-org25f261e" class="outline-2">
+<h2 id="org25f261e">在新的 frame 中打开待办事项列表文件</h2>
+<div class="outline-text-2" id="text-org25f261e">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun find-todo-list()
+  "Open todo.org in other frame"
+  (interactive)
+  (if (not (equal (buffer-file-name) (file-truename "~/e/todo.org")))
+      (find-file-other-frame "~/e/todo.org")))
+
+(global-set-key (kbd "C-c t") 'find-todo-list)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1361376" class="outline-2">
+<h2 id="org1361376">打开(长)文件并左右分屏显示并启用 follow mode</h2>
+<div class="outline-text-2" id="text-org1361376">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun find-file-side-by-side()
+  "Open file side by side with follow mode enabled"
+  (interactive)
+  (setq filename (read-file-name "Choose a file: "))
+  (message "Selected file: %s" filename)
+  (find-file filename)
+  (split-window-horizontally)
+  (follow-mode))
+
+(global-set-key (kbd "C-c s") 'find-file-side-by-side)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge77735b" class="outline-2">
+<h2 id="orge77735b">打开并监控 zsh shell 的操作历史</h2>
+<div class="outline-text-2" id="text-orge77735b">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun tail-zsh-history()
+  "tail zsh history log"
+  (interactive)
+  (find-file "~/.local/state/zsh/.histfile")
+  (end-of-buffer)
+  (auto-revert-tail-mode))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org14dda09" class="outline-2">
+<h2 id="org14dda09">打开 buffer 内容中指向的文件</h2>
+<div class="outline-text-2" id="text-org14dda09">
+<p>
+<code>find-file-at-point</code><br />
+e.g ~/.local/state/zsh/.histfile<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org774590d" class="outline-2">
+<h2 id="org774590d">打开剪切板的内容并将其作为路径</h2>
+<div class="outline-text-2" id="text-org774590d">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun find-file-at-clipboard()
+  "Find file at clipboard path."
+  (interactive)
+  (with-temp-buffer
+    (clipboard-yank)
+    (find-file-at-point)))
+
+(global-set-key (kbd "C-c f") 'find-file-at-clipboard)
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-06-22 Thu 04:45</p>
+<p class="date">Created: 2023-06-22 Thu 07:41</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
