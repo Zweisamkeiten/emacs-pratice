@@ -313,3 +313,37 @@ e.g ~/.local/state/zsh/.histfile
 | C-SPC       | 然后移动光标    |
 | shift + 移动 | 自动 mark      |
 | C-x         | 选定整个 buffer |
+
+* 编辑内容
++ 直接输入内容
++ 快速输入内容
++ 矩形编辑
++ 输入 emoji
+
+** 快速输入内容
+*** Abbrev
+选中要用作扩展的词，然后键入 C-x a g以及它的缩写
+
+然后之后输入缩写, 在缩写之后 键入 C-x a ' 自动扩展
+#+begin_src emacs-lisp
+  (setq abbrev-file-name (expand-file-name "abbrev_defs" user-emacs-directory))
+  (setq save-abbrevs 'silently) ;; save abbrevs when file are saved
+#+end_src
+
+*** Dynamic Abbrev
+
+~M+/~ 输入部分, emacs 会根据 buffer 已有的内容自动补全一个单词
+
+** 矩形编辑
+
+~C-x SPC~ 把 region 转换为 Rectangles ~C-x r t~ 替换矩形文本
+
+hello world
+hello world
+hello world
+
+** 输入 Emoji
+
+~C-x 8 C-h~
+~C-x 8 RET~
+👨
