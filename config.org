@@ -146,3 +146,24 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件
 #+begin_src emacs-lisp
   (global-auto-revert-mode t)
 #+end_src
+
+* 当退出时, 更友好的提示未保存的文件
+
+#+begin_src emacs-lisp
+  (defun clean-exit ()
+    "Exit Emacs cleanly. If there are unsaved buffer, pop up a list for them to be saved before existing.
+  Replaces 'save-buffers-kill-terminal'."
+    (interactive)
+    (if (frame-parameter nil 'client)
+	(server-save-buffers-kill-terminal arg)
+      (if-let ((buf-list (seq-filter (lambda (buf)
+				       (and (buffer-modified-p buf)
+					    (buffer-file-name buf)))
+				     (buffer-list))))
+	  (progn
+	    (pop-to-buffer (list-buffers-noselect t buf-list))
+	    (message "s to save, C-k to kill, x to execute"))
+	(save-buffers-kill-emacs))))
+
+  (global-set-key (kbd "C-x C-c") 'clean-exit)
+#+end_src
