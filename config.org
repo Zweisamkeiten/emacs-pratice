@@ -138,3 +138,11 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件
   (scroll-bar-mode -1)
   (menu-bar-mode -1)
 #+end_src
+
+* 自动恢复 buffer
+
+现代化的文本编辑器在检测到文件因为别的原因被修改时都会进行同步.
+
+#+begin_src emacs-lisp
+  (global-auto-revert-mode t)
+#+end_src
