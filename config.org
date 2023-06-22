@@ -497,3 +497,68 @@ https://github.com/ecukes/espuds/blob/master/espuds.el#L290-L291
 #+begin_src shell
   eask run test
 #+end_src
+
+* Elegant Markup 标记
+
+** 插入同级别 heading 标题
+
+~C-RET~ 在当前标题以及所有内容之后插入一个同级新标题
+~M-RET~ 在当前标题或内容后直接插入一个同级新标题
+
+** 调整和递归跳转标题 heading 层级
+
+~M-<LEFT>~ 和 ~M-<RIGHT>~
+
+~M-S-<LEFT>~ 和 ~M-S-<RIGHT>~
+
+** 移动标题 heading
+
+~M-<UP>~ 和 ~M-<DOWN>~
+
+连带着标题以及内容移动
+
+** 列表
+
+- 无序列表 :: 使用 + 或 - 开头
+- 有序列表 :: 使用 1. 或 1) 开头
+
+  ~M-RET~ 会自动插入列表新项
+
+** 块
+
+~#+begin_xxx ... #+end_xxx~
+
+- src
+- example
+- quote
+
+*** 快速输入块
+
+快捷键 ~C-c C-,~ 加上对应字母
+
+** 字体
+
+- ~*粗体*~
+- ~/斜体/~
+- ~+删除线+~
+- ~_下划线_~
+
+*hello*
+/hello/
++hello+
+_hello_
+
+*** 快速添加字体
+#+begin_src emacs-lisp
+  (use-package wrap-region
+    :straight t
+    :config
+    (wrap-region-add-wrappers
+     '(("*" "*" nil org-mode)
+       ("~" "~" nil org-mode)
+       ("/" "/" nil org-mode)
+       ("_" "_" nil org-mode)))
+    (add-hook 'org-mode-hook 'wrap-region-mode))
+#+end_src
+
+选中需要包围的词 输入 ~*~ 或者其他, 就会在前后添加
