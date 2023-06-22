@@ -609,3 +609,57 @@ _hello_
 
 ~C-c ^~ 排序
 
+* 表格 table
+
+** 创建新的空白表格
+
+~org-table-create~ 然后输入列和行数
+
+|   |   |   |   |   |
+|---+---+---+---+---|
+|   |   |   |   |   |
+
+** 将 region 转换为表格
+
+选中后 ~C-c |~ 调用 ~org-table-create-or-convert-from-region~
+
+aaa bbb ccc
+ddd eee fff
+
+** 手动快速创建表格头
+
+#+begin_src
+  | Name | Phone | Age |
+  |-
+#+end_src
+
+以上样子在 ~-~ 后按 tab 自动展开
+
+** 列和行编辑
+| Command   | Function                             | Chinese Description          |
+|-----------+--------------------------------------+------------------------------|
+| M-S-LEFT  | org-table-delete-column              | 删除当前列                   |
+| C-c RET   | org-table-insert-row                 | 在当前位置插入新行           |
+| M-S-LEFT  | org-table-move-column-left           | 将当前列向左移动             |
+| M-S-RIGHT | org-table-move-column-right          | 将当前列向右移动             |
+| M-DOWN    | org-table-move-row-down              | 将当前行向下移动             |
+| C-c +     | org-table-sum                        | 对当前列中的值求和           |
+| C-c *     | org-table-multiply                   | 将当前列中的值乘以一个因子   |
+| C-c =     | org-table-eval-formula               | 在当前单元格或区域中计算公式 |
+| C-c ^     | org-table-sort-lines                 | 按当前列中的值对表格进行排序 |
+| C-c {     | org-table-toggle-formula-debugger    | 切换当前表格的公式调试器     |
+| C-c }     | org-table-toggle-coordinate-overlays | 切换当前表格的坐标覆盖层     |
+
+| 部件 | 型号   | 价格 |
+|------+--------+------|
+| CPU  | 1249F  |  924 |
+| 主板 | 8760m  |  917 |
+| 散热 | E3     |   73 |
+| 显卡 | 3060ti | 3094 |
+| 内存 | 8G * 2 |  259 |
+| 硬盘 | m2 1t  |  359 |
+| 电源 | GM550w |  213 |
+| 机箱 | 白色   |  156 |
+| 总价 |        | 5995 |
+
+
