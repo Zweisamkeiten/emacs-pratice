@@ -562,3 +562,50 @@ _hello_
 #+end_src
 
 选中需要包围的词 输入 ~*~ 或者其他, 就会在前后添加
+
+* Structured Editing
+
+** 展开/隐藏节点
+
+| Command           | Key Binding | Description                                |
+|-------------------+-------------+--------------------------------------------|
+| org-cycle         | TAB         | 循环切换节点的可见性                       |
+| org-shifttab      | S-TAB       | 全局切换节点的可见性                       |
+| org-show-branches | C-c C-k     | 隐藏当前节点的内容，只保留标题（任意位置） |
+
+
+** 设置默认的可见性
+
+#+begin_src
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: show2levels
+#+STARTUP: show3levels
+#+STARTUP: show4levels
+#+STARTUP: show5levels
+#+STARTUP: showeverything
+#+end_src
+
+** 移动
+
+| Command | Function                        | Description              |
+|---------+---------------------------------+--------------------------|
+| C-c C-n | org-forward-heading-same-level  | 移动到同级别的下一个标题 |
+| C-c C-p | org-backward-heading-same-level | 移动到同级别的上一个标题 |
+| C-c C-f | org-next-visible-heading        | 移动到下一个可见标题     |
+| C-c C-b | org-previous-visible-heading    | 移动到上一个可见标题     |
+| C-c C-u | org-up-element                  | 移动到更高级别的标题     |
+| C-c C-e | org-end-of-subtree              | 移动到当前子树的末尾     |
+| C-c C-a | org-beginning-of-subtree        | 移动到当前子树的开头     |
+
+** 搜索
+~C-c /~ 然后选择匹配的方式。
+
+因为 Org mode 可能会隐藏部分内容的特性，它有自己的搜索方法。
+** 列表
+先全部选中
+~C-c *~ 把列表转换为标题
+
+~C-c ^~ 排序
+
