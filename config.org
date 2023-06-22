@@ -223,3 +223,8 @@ e.g ~/.local/state/zsh/.histfile
   (global-set-key (kbd "C-c f") 'find-file-at-clipboard)
 #+end_src
 
+* 全局设置自动保存
+
+#+begin_src emacs-lisp
+  (auto-save-visited-mode)
+#+end_src
