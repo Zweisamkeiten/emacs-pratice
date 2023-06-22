@@ -282,3 +282,34 @@ e.g ~/.local/state/zsh/.histfile
 #+begin_src
   (desktop-save-mode 1)
 #+end_src
+
+* Buffer 中移动光标
+
+| C-b | 左移字符 |
+| C-f | 右移字符 |
+
+| M-b | 左移单词 |
+| M-f | 右移单词 |
+
+| C-a | 移动到行首 |
+| C-e | 移动到行尾 |
+| C-n | 移动下一行 |
+| C-p | 移动上一行 |
+
+| M-<   | 移动到 buffer 头部    |
+| M->   | 移动到 buffer 尾部    |
+| M-g g | 移动到 buffer 中指定行 |
+| C-v   | 向下滚动              |
+| M-v   | 向上滚动              |
+
+| C-M-v   | 其他 buffer 向上滚动 |
+| C-M-S-v | 其他 buffer 向下滚动 |
+
+| C-s | 向下搜索 |
+| C-r | 向上搜索 |
+
+* 设置标记
+
+| C-SPC       | 然后移动光标    |
+| shift + 移动 | 自动 mark      |
+| C-x         | 选定整个 buffer |
