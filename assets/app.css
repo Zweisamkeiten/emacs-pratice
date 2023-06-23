@@ -1,8 +1,0 @@
-#moduleList > li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-#toggleSrcButton {
-  float: right;
-}

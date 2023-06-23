@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-22 Thu 07:41 -->
+<!-- 2023-06-23 Fri 09:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,35 +245,151 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org138b0af">默认折叠代码</a></li>
-<li><a href="#org142d71d">打开配置文件</a></li>
-<li><a href="#org2a5c809">重新加载配置</a></li>
-<li><a href="#org81278a5">包管理</a></li>
-<li><a href="#org8d230a8">主题</a></li>
-<li><a href="#orgdcdcbe0">切换主题</a></li>
-<li><a href="#org8a30577">设置专门的 cutstom.el 来存放生成的配置文件</a></li>
-<li><a href="#org3bfe087">使用 y or n 来回答</a></li>
-<li><a href="#org55ac68b">不要生成备份文件</a></li>
-<li><a href="#org068dda6">精简 UI, 扩大可视面积</a></li>
-<li><a href="#orgcb2785d">自动恢复 buffer</a></li>
-<li><a href="#org9c40179">当退出时, 更友好的提示未保存的文件</a></li>
-<li><a href="#org25f261e">在新的 frame 中打开待办事项列表文件</a></li>
-<li><a href="#org1361376">打开(长)文件并左右分屏显示并启用 follow mode</a></li>
-<li><a href="#orge77735b">打开并监控 zsh shell 的操作历史</a></li>
-<li><a href="#org14dda09">打开 buffer 内容中指向的文件</a></li>
-<li><a href="#org774590d">打开剪切板的内容并将其作为路径</a></li>
+<li><a href="#org0546def">默认折叠代码</a></li>
+<li><a href="#org0e3f149">打开配置文件</a></li>
+<li><a href="#org41d3d6f">重新加载配置</a></li>
+<li><a href="#org5155b7b">包管理</a></li>
+<li><a href="#org78e760c">主题</a></li>
+<li><a href="#org2e43634">切换主题</a></li>
+<li><a href="#org0ff4ec2">设置专门的 cutstom.el 来存放生成的配置文件</a></li>
+<li><a href="#orge896f9c">使用 y or n 来回答</a></li>
+<li><a href="#orge1baa56">不要生成备份文件</a></li>
+<li><a href="#orgb64ab9c">精简 UI, 扩大可视面积</a></li>
+<li><a href="#orgc7c47ab">自动恢复 buffer</a></li>
+<li><a href="#orgc676e19">当退出时, 更友好的提示未保存的文件</a></li>
+<li><a href="#org54471f2">打开文件</a>
+<ul>
+<li><a href="#org0ddb25d">选定文件并打开</a></li>
+<li><a href="#orgada92e2">快速打开特定文件</a></li>
+</ul>
+</li>
+<li><a href="#org4e37ed7">保存文件</a></li>
+<li><a href="#org6bec97e">在新的 frame 中打开待办事项列表文件</a></li>
+<li><a href="#orge4b006d">打开(长)文件并左右分屏显示并启用 follow mode</a></li>
+<li><a href="#org79442ee">打开并监控 zsh shell 的操作历史</a></li>
+<li><a href="#org7a52a46">打开 buffer 内容中指向的文件</a></li>
+<li><a href="#orgccfa712">打开剪切板的内容并将其作为路径</a></li>
+<li><a href="#org9830fb8">全局设置自动保存</a></li>
+<li><a href="#orgf8ed5a3">切换窗口</a>
+<ul>
+<li><a href="#org37ba32e">切换到指定窗口</a></li>
+<li><a href="#org4885500">恢复窗口布局</a>
+<ul>
+<li><a href="#org72119f7">重启后恢复</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org565b1c0">Buffer 中移动光标</a></li>
+<li><a href="#orgf06709f">设置标记</a></li>
+<li><a href="#org83783ad">编辑内容</a>
+<ul>
+<li><a href="#org74e859d">快速输入内容</a>
+<ul>
+<li><a href="#orgf3ed828">Abbrev</a></li>
+<li><a href="#orgc9547c9">Dynamic Abbrev</a></li>
+</ul>
+</li>
+<li><a href="#org305c24d">矩形编辑</a></li>
+<li><a href="#org4ba1279">输入 Emoji</a></li>
+</ul>
+</li>
+<li><a href="#org0cb7d01">自定义 modeline</a>
+<ul>
+<li><a href="#org2eb3182">常见函数</a></li>
+</ul>
+</li>
+<li><a href="#orgc65395b">Minibuffer</a>
+<ul>
+<li><a href="#org4f4fd30">Minibuffer 也是 buffer</a></li>
+<li><a href="#org9ab7d25">Minibuffer 不一定是 buffer</a></li>
+<li><a href="#orge2282d5">自动补全</a></li>
+</ul>
+</li>
+<li><a href="#orgbb986d6">BDD</a>
+<ul>
+<li><a href="#orgce9909a">Emacs lisp 中的 BDD</a></li>
+<li><a href="#orgd912f91">配置环境</a>
+<ul>
+<li><a href="#orgf19a02e">安装 eask</a></li>
+<li><a href="#org5aaf4b2">初始化 eask</a></li>
+<li><a href="#org89205bc">添加 ecukes 和 espuds 的依赖</a></li>
+<li><a href="#orgfd8706e">初始化测试文件</a></li>
+</ul>
+</li>
+<li><a href="#org9d758fb">编写测试和定义步骤</a>
+<ul>
+<li><a href="#org7064303">编写测试</a></li>
+<li><a href="#orge78b73a">定义步骤</a></li>
+<li><a href="#orge2177e6">执行测试</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1042689">Elegant Markup 标记</a>
+<ul>
+<li><a href="#org65a8619">插入同级别 heading 标题</a></li>
+<li><a href="#org874183e">调整和递归跳转标题 heading 层级</a></li>
+<li><a href="#org046c180">移动标题 heading</a></li>
+<li><a href="#org4842f31">列表</a></li>
+<li><a href="#orgd087c98">块</a>
+<ul>
+<li><a href="#org701bcd1">快速输入块</a></li>
+</ul>
+</li>
+<li><a href="#org98fbd3e">字体</a>
+<ul>
+<li><a href="#orga691531">快速添加字体</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb6d037c">Structured Editing</a>
+<ul>
+<li><a href="#orge848664">展开/隐藏节点</a></li>
+<li><a href="#orgcbfd150">设置默认的可见性</a></li>
+<li><a href="#orge9109e0">移动</a></li>
+<li><a href="#org5ac268c">搜索</a></li>
+<li><a href="#org34d438f">列表</a></li>
+</ul>
+</li>
+<li><a href="#org133eddc">表格 table</a>
+<ul>
+<li><a href="#org68eea43">创建新的空白表格</a></li>
+<li><a href="#orgb47ace7">将 region 转换为表格</a></li>
+<li><a href="#org1e36c43">手动快速创建表格头</a></li>
+<li><a href="#org09f54ee">列和行编辑</a>
+<ul>
+<li><a href="#orgf64c3ec">中文对齐问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org28bf36e">代码块</a>
+<ul>
+<li><a href="#org7d66def">代码块结构</a></li>
+<li><a href="#orgabf4b9f">设置可以执行的编程语言</a></li>
+<li><a href="#orgf521f58">提取源代码到指定文件</a></li>
+<li><a href="#org9587809">多个代码块 tanagle 到同一个文件</a>
+<ul>
+<li><a href="#orgcc28e76">直接合并</a></li>
+<li><a href="#org31d39a9">使用 noweb 来实现嵌套</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org138b0af" class="outline-2">
-<h2 id="org138b0af">默认折叠代码</h2>
-<div class="outline-text-2" id="text-org138b0af">
+<div id="outline-container-org0546def" class="outline-2">
+<h2 id="org0546def">默认折叠代码</h2>
+<div class="outline-text-2" id="text-org0546def">
 </div>
 </div>
 
-<div id="outline-container-org142d71d" class="outline-2">
-<h2 id="org142d71d">打开配置文件</h2>
-<div class="outline-text-2" id="text-org142d71d">
+<div id="outline-container-org0e3f149" class="outline-2">
+<h2 id="org0e3f149">打开配置文件</h2>
+<div class="outline-text-2" id="text-org0e3f149">
 <p>
 C-c I<br />
 </p>
@@ -282,16 +398,16 @@ C-c I<br />
 <pre class="src src-emacs-lisp">(defun find-config ()
   "Edit config.org"
   (interactive)
-  (find-file "~/p/emacs/config.org"))
+  (find-file (expand-file-name "config.org" (expand-file-name user-emacs-directory))))
 (global-set-key (kbd "C-c I") 'find-config)
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2a5c809" class="outline-2">
-<h2 id="org2a5c809">重新加载配置</h2>
-<div class="outline-text-2" id="text-org2a5c809">
+<div id="outline-container-org41d3d6f" class="outline-2">
+<h2 id="org41d3d6f">重新加载配置</h2>
+<div class="outline-text-2" id="text-org41d3d6f">
 <p>
 C-c R<br />
 </p>
@@ -300,17 +416,19 @@ C-c R<br />
 <pre class="src src-emacs-lisp">(defun reload-config ()
   "Reload config"
   (interactive)
-  (delete-file "~/p/emacs/config.el")
-  (org-babel-load-file (expand-file-name "~/p/emacs/config.org")))
+  (delete-file (expand-file-name "config.el" (expand-file-name user-emacs-directory)))
+  (org-babel-load-file (expand-file-name
+			"config.org"
+			(expand-file-name user-emacs-directory))))
 (global-set-key (kbd "C-c R") 'reload-config)
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org81278a5" class="outline-2">
-<h2 id="org81278a5">包管理</h2>
-<div class="outline-text-2" id="text-org81278a5">
+<div id="outline-container-org5155b7b" class="outline-2">
+<h2 id="org5155b7b">包管理</h2>
+<div class="outline-text-2" id="text-org5155b7b">
 <p>
 emacs 29 已经集成了 use-package<br />
 </p>
@@ -350,9 +468,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org8d230a8" class="outline-2">
-<h2 id="org8d230a8">主题</h2>
-<div class="outline-text-2" id="text-org8d230a8">
+<div id="outline-container-org78e760c" class="outline-2">
+<h2 id="org78e760c">主题</h2>
+<div class="outline-text-2" id="text-org78e760c">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(use-package kaolin-themes
   :straight t)
@@ -361,11 +479,11 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-orgdcdcbe0" class="outline-2">
-<h2 id="orgdcdcbe0">切换主题</h2>
-<div class="outline-text-2" id="text-orgdcdcbe0">
+<div id="outline-container-org2e43634" class="outline-2">
+<h2 id="org2e43634">切换主题</h2>
+<div class="outline-text-2" id="text-org2e43634">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(setq-default custom-enabled-themes '(kaolin-light))
+<pre class="src src-emacs-lisp">(setq-default custom-enabled-themes '(kaolin-galaxy))
 
 (defun reapply-themes ()
   "Forcibly load the themes listed in `custom-enabled-themes'."
@@ -386,16 +504,16 @@ emacs 29 已经集成了 use-package<br />
 (defun theme-dark ()
   "Activate a dark color theme."
   (interactive)
-  (setq custom-enabled-themes '(kaolin-dark))
+  (setq custom-enabled-themes '(kaolin-galaxy))
   (reapply-themes))
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org8a30577" class="outline-2">
-<h2 id="org8a30577">设置专门的 cutstom.el 来存放生成的配置文件</h2>
-<div class="outline-text-2" id="text-org8a30577">
+<div id="outline-container-org0ff4ec2" class="outline-2">
+<h2 id="org0ff4ec2">设置专门的 cutstom.el 来存放生成的配置文件</h2>
+<div class="outline-text-2" id="text-org0ff4ec2">
 <p>
 让自动生成的配置放到专门的配置文件中, 防止污染 init.el<br />
 </p>
@@ -408,9 +526,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org3bfe087" class="outline-2">
-<h2 id="org3bfe087">使用 y or n 来回答</h2>
-<div class="outline-text-2" id="text-org3bfe087">
+<div id="outline-container-orge896f9c" class="outline-2">
+<h2 id="orge896f9c">使用 y or n 来回答</h2>
+<div class="outline-text-2" id="text-orge896f9c">
 <p>
 默认是 yes or no 来表示 确认/取消.<br />
 </p>
@@ -430,9 +548,9 @@ emacs 29 已经集成了 use-package<br />
 </div>
 </div>
 
-<div id="outline-container-org55ac68b" class="outline-2">
-<h2 id="org55ac68b">不要生成备份文件</h2>
-<div class="outline-text-2" id="text-org55ac68b">
+<div id="outline-container-orge1baa56" class="outline-2">
+<h2 id="orge1baa56">不要生成备份文件</h2>
+<div class="outline-text-2" id="text-orge1baa56">
 <p>
 emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </p>
@@ -451,9 +569,9 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </div>
 </div>
 
-<div id="outline-container-org068dda6" class="outline-2">
-<h2 id="org068dda6">精简 UI, 扩大可视面积</h2>
-<div class="outline-text-2" id="text-org068dda6">
+<div id="outline-container-orgb64ab9c" class="outline-2">
+<h2 id="orgb64ab9c">精简 UI, 扩大可视面积</h2>
+<div class="outline-text-2" id="text-orgb64ab9c">
 <p>
 不要工具栏, 不要滚动条, 不要菜单栏<br />
 </p>
@@ -467,9 +585,9 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </div>
 </div>
 
-<div id="outline-container-orgcb2785d" class="outline-2">
-<h2 id="orgcb2785d">自动恢复 buffer</h2>
-<div class="outline-text-2" id="text-orgcb2785d">
+<div id="outline-container-orgc7c47ab" class="outline-2">
+<h2 id="orgc7c47ab">自动恢复 buffer</h2>
+<div class="outline-text-2" id="text-orgc7c47ab">
 <p>
 现代化的文本编辑器在检测到文件因为别的原因被修改时都会进行同步.<br />
 </p>
@@ -481,9 +599,9 @@ emacs 会生成 #xxx# 和 xxx~ 这样的历史备份文件<br />
 </div>
 </div>
 
-<div id="outline-container-org9c40179" class="outline-2">
-<h2 id="org9c40179">当退出时, 更友好的提示未保存的文件</h2>
-<div class="outline-text-2" id="text-org9c40179">
+<div id="outline-container-orgc676e19" class="outline-2">
+<h2 id="orgc676e19">当退出时, 更友好的提示未保存的文件</h2>
+<div class="outline-text-2" id="text-orgc676e19">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun clean-exit ()
   "Exit Emacs cleanly. If there are unsaved buffer, pop up a list for them to be saved before existing.
@@ -506,9 +624,104 @@ Replaces 'save-buffers-kill-terminal'."
 </div>
 </div>
 
-<div id="outline-container-org25f261e" class="outline-2">
-<h2 id="org25f261e">在新的 frame 中打开待办事项列表文件</h2>
-<div class="outline-text-2" id="text-org25f261e">
+<div id="outline-container-org54471f2" class="outline-2">
+<h2 id="org54471f2">打开文件</h2>
+<div class="outline-text-2" id="text-org54471f2">
+</div>
+<div id="outline-container-org0ddb25d" class="outline-3">
+<h3 id="org0ddb25d">选定文件并打开</h3>
+<div class="outline-text-3" id="text-org0ddb25d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-x C-f</td>
+<td class="org-left">当前窗口打开文件</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x 4 f</td>
+<td class="org-left">在其他窗口打开文件</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x 4 C-o</td>
+<td class="org-left">在其他窗口显示一个 buffer</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x 4 b</td>
+<td class="org-left">切换另一个窗口的 buffer 并且激活那个窗口</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x 5 f</td>
+<td class="org-left">在新 frame 中打开文件</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x C-r</td>
+<td class="org-left">在当前窗口以只读形式打开文件</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x 4 r</td>
+<td class="org-left">在其他窗口以只读形式打开文件</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgada92e2" class="outline-3">
+<h3 id="orgada92e2">快速打开特定文件</h3>
+<div class="outline-text-3" id="text-orgada92e2">
+<p>
+使用 <code>C-x r m</code> 把当前文件设置为书签，之后就能使用 <code>C-x r b</code> 跳转到该书签。<br />
+</p>
+
+<p>
+临时记录特定文件可以使用 <code>C-x r space</code> 来将当前位置保存到指定寄存器中，之后使用 <code>C-x r j</code> 跳到指定寄存器所在的位置，注意关闭 emacs 后记录会消失。<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4e37ed7" class="outline-2">
+<h2 id="org4e37ed7">保存文件</h2>
+<div class="outline-text-2" id="text-org4e37ed7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-x C-s</td>
+<td class="org-left">保存当前文件</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x s</td>
+<td class="org-left">保存所有文件</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org6bec97e" class="outline-2">
+<h2 id="org6bec97e">在新的 frame 中打开待办事项列表文件</h2>
+<div class="outline-text-2" id="text-org6bec97e">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun find-todo-list()
   "Open todo.org in other frame"
@@ -522,9 +735,9 @@ Replaces 'save-buffers-kill-terminal'."
 </div>
 </div>
 
-<div id="outline-container-org1361376" class="outline-2">
-<h2 id="org1361376">打开(长)文件并左右分屏显示并启用 follow mode</h2>
-<div class="outline-text-2" id="text-org1361376">
+<div id="outline-container-orge4b006d" class="outline-2">
+<h2 id="orge4b006d">打开(长)文件并左右分屏显示并启用 follow mode</h2>
+<div class="outline-text-2" id="text-orge4b006d">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun find-file-side-by-side()
   "Open file side by side with follow mode enabled"
@@ -541,9 +754,9 @@ Replaces 'save-buffers-kill-terminal'."
 </div>
 </div>
 
-<div id="outline-container-orge77735b" class="outline-2">
-<h2 id="orge77735b">打开并监控 zsh shell 的操作历史</h2>
-<div class="outline-text-2" id="text-orge77735b">
+<div id="outline-container-org79442ee" class="outline-2">
+<h2 id="org79442ee">打开并监控 zsh shell 的操作历史</h2>
+<div class="outline-text-2" id="text-org79442ee">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun tail-zsh-history()
   "tail zsh history log"
@@ -556,9 +769,9 @@ Replaces 'save-buffers-kill-terminal'."
 </div>
 </div>
 
-<div id="outline-container-org14dda09" class="outline-2">
-<h2 id="org14dda09">打开 buffer 内容中指向的文件</h2>
-<div class="outline-text-2" id="text-org14dda09">
+<div id="outline-container-org7a52a46" class="outline-2">
+<h2 id="org7a52a46">打开 buffer 内容中指向的文件</h2>
+<div class="outline-text-2" id="text-org7a52a46">
 <p>
 <code>find-file-at-point</code><br />
 e.g ~/.local/state/zsh/.histfile<br />
@@ -566,9 +779,9 @@ e.g ~/.local/state/zsh/.histfile<br />
 </div>
 </div>
 
-<div id="outline-container-org774590d" class="outline-2">
-<h2 id="org774590d">打开剪切板的内容并将其作为路径</h2>
-<div class="outline-text-2" id="text-org774590d">
+<div id="outline-container-orgccfa712" class="outline-2">
+<h2 id="orgccfa712">打开剪切板的内容并将其作为路径</h2>
+<div class="outline-text-2" id="text-orgccfa712">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun find-file-at-clipboard()
   "Find file at clipboard path."
@@ -582,9 +795,1278 @@ e.g ~/.local/state/zsh/.histfile<br />
 </div>
 </div>
 </div>
+
+<div id="outline-container-org9830fb8" class="outline-2">
+<h2 id="org9830fb8">全局设置自动保存</h2>
+<div class="outline-text-2" id="text-org9830fb8">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(auto-save-visited-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf8ed5a3" class="outline-2">
+<h2 id="orgf8ed5a3">切换窗口</h2>
+<div class="outline-text-2" id="text-orgf8ed5a3">
+</div>
+<div id="outline-container-org37ba32e" class="outline-3">
+<h3 id="org37ba32e">切换到指定窗口</h3>
+<div class="outline-text-3" id="text-org37ba32e">
+<p>
+<code>M-o</code> 然后按下窗口左上角显示的对应字母 (a r s t d t h n e i o)<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package ace-window
+  :config
+  (setq aw-keys '(?a ?r ?s ?t ?d ?h ?n ?e ?i ?o))
+  (custom-set-faces
+   '(aw-leading-char-face
+     ((t (:inherit ace-jump-face-foreground :height 2.0)))))
+  :bind
+  ("M-o" . ace-window))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4885500" class="outline-3">
+<h3 id="org4885500">恢复窗口布局</h3>
+<div class="outline-text-3" id="text-org4885500">
+<p>
+<code>C-c &lt;left-arrow&gt; &lt;right-arrow&gt;</code> 来恢复撤销之前的窗口布局<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package winner-mode
+  :straight nil
+  :hook
+  (after-init . winner-mode))
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org72119f7" class="outline-4">
+<h4 id="org72119f7">重启后恢复</h4>
+<div class="outline-text-4" id="text-org72119f7">
+<pre class="example">
+(desktop-save-mode 1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org565b1c0" class="outline-2">
+<h2 id="org565b1c0">Buffer 中移动光标</h2>
+<div class="outline-text-2" id="text-org565b1c0">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-b</td>
+<td class="org-left">左移字符</td>
+</tr>
+
+<tr>
+<td class="org-left">C-f</td>
+<td class="org-left">右移字符</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">M-b</td>
+<td class="org-left">左移单词</td>
+</tr>
+
+<tr>
+<td class="org-left">M-f</td>
+<td class="org-left">右移单词</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-a</td>
+<td class="org-left">移动到行首</td>
+</tr>
+
+<tr>
+<td class="org-left">C-e</td>
+<td class="org-left">移动到行尾</td>
+</tr>
+
+<tr>
+<td class="org-left">C-n</td>
+<td class="org-left">移动下一行</td>
+</tr>
+
+<tr>
+<td class="org-left">C-p</td>
+<td class="org-left">移动上一行</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">M-&lt;</td>
+<td class="org-left">移动到 buffer 头部</td>
+</tr>
+
+<tr>
+<td class="org-left">M-&gt;</td>
+<td class="org-left">移动到 buffer 尾部</td>
+</tr>
+
+<tr>
+<td class="org-left">M-g g</td>
+<td class="org-left">移动到 buffer 中指定行</td>
+</tr>
+
+<tr>
+<td class="org-left">C-v</td>
+<td class="org-left">向下滚动</td>
+</tr>
+
+<tr>
+<td class="org-left">M-v</td>
+<td class="org-left">向上滚动</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-M-v</td>
+<td class="org-left">其他 buffer 向上滚动</td>
+</tr>
+
+<tr>
+<td class="org-left">C-M-S-v</td>
+<td class="org-left">其他 buffer 向下滚动</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-s</td>
+<td class="org-left">向下搜索</td>
+</tr>
+
+<tr>
+<td class="org-left">C-r</td>
+<td class="org-left">向上搜索</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgf06709f" class="outline-2">
+<h2 id="orgf06709f">设置标记</h2>
+<div class="outline-text-2" id="text-orgf06709f">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">C-SPC</td>
+<td class="org-left">然后移动光标</td>
+</tr>
+
+<tr>
+<td class="org-left">shift + 移动</td>
+<td class="org-left">自动 mark</td>
+</tr>
+
+<tr>
+<td class="org-left">C-x</td>
+<td class="org-left">选定整个 buffer</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org83783ad" class="outline-2">
+<h2 id="org83783ad">编辑内容</h2>
+<div class="outline-text-2" id="text-org83783ad">
+<ul class="org-ul">
+<li>直接输入内容<br /></li>
+<li>快速输入内容<br /></li>
+<li>矩形编辑<br /></li>
+<li>输入 emoji<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org74e859d" class="outline-3">
+<h3 id="org74e859d">快速输入内容</h3>
+<div class="outline-text-3" id="text-org74e859d">
+</div>
+<div id="outline-container-orgf3ed828" class="outline-4">
+<h4 id="orgf3ed828">Abbrev</h4>
+<div class="outline-text-4" id="text-orgf3ed828">
+<p>
+选中要用作扩展的词，然后键入 C-x a g以及它的缩写<br />
+</p>
+
+<p>
+然后之后输入缩写, 在缩写之后 键入 C-x a ' 自动扩展<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq abbrev-file-name (expand-file-name "abbrev_defs" user-emacs-directory))
+(setq save-abbrevs 'silently) ;; save abbrevs when file are saved
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc9547c9" class="outline-4">
+<h4 id="orgc9547c9">Dynamic Abbrev</h4>
+<div class="outline-text-4" id="text-orgc9547c9">
+<p>
+<code>M+/</code> 输入部分, emacs 会根据 buffer 已有的内容自动补全一个单词<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org305c24d" class="outline-3">
+<h3 id="org305c24d">矩形编辑</h3>
+<div class="outline-text-3" id="text-org305c24d">
+<p>
+<code>C-x SPC</code> 把 region 转换为 Rectangles <code>C-x r t</code> 替换矩形文本<br />
+</p>
+
+<p>
+hello world<br />
+hello world<br />
+hello world<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ba1279" class="outline-3">
+<h3 id="org4ba1279">输入 Emoji</h3>
+<div class="outline-text-3" id="text-org4ba1279">
+<p>
+<code>C-x 8 C-h</code><br />
+<code>C-x 8 RET</code><br />
+👨<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0cb7d01" class="outline-2">
+<h2 id="org0cb7d01">自定义 modeline</h2>
+<div class="outline-text-2" id="text-org0cb7d01">
+<p>
+保留了一部分常用的信息 (buffer 名称, 版本控制信息, 是否只读, 是否被编辑过)<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq mode-line-format
+   '("%e"
+     mode-line-front-space
+     (:propertize
+      (""
+       mode-line-mule-info
+       mode-line-client
+       mode-line-modified
+       mode-line-remote)
+      display
+      (min-width
+       (5.0)))
+     mode-line-frame-identification
+     mode-line-buffer-identification
+     "   "
+     mode-line-position
+     (vc-mode vc-mode)
+     "  "
+     mode-line-modes
+     mode-line-misc-info
+     mode-line-end-spaces
+     ))
+</pre>
+</div>
+
+<p>
+还加上了可爱的彩虹猫咪来显示光标在 buffer 中的大概位置。<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package nyan-mode
+  :init
+  (setq nyan-animate-nyancat t)
+  (setq nyan-wavy-trail t)
+  (setq nyan-minimum-window-width 80)
+  (setq nyan-bar-length 20)
+  (nyan-mode))
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org2eb3182" class="outline-3">
+<h3 id="org2eb3182">常见函数</h3>
+<div class="outline-text-3" id="text-org2eb3182">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">mode-line-front-space</td>
+<td class="org-left">Dash (-) for text terminals, a space ( ) for graphic displays</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-mule-info</td>
+<td class="org-left">Information on character sets, encodings, and other human-language details</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-client</td>
+<td class="org-left">Identifies frames created by emacsclient</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-modified</td>
+<td class="org-left">Modified and read-only status</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-remote</td>
+<td class="org-left">At-sign (@) for buffers visiting remote files, otherwise a dash</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-frame-identification</td>
+<td class="org-left">Frame title, for some environments</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-buffer-identification</td>
+<td class="org-left">Buffer/file name</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-position</td>
+<td class="org-left">Line, column, and portion (percent) of point in buffer; total size</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-modes</td>
+<td class="org-left">Major and minor modes, in parenthesis; square brackets if RecursiveEdit</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-misc-info</td>
+<td class="org-left">Defun name for ‘which-function-mode’, clock for ‘display-time-mode’</td>
+</tr>
+
+<tr>
+<td class="org-left">mode-line-end-spaces</td>
+<td class="org-left">A line of dashes for text terminals; nothing for graphics displays</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc65395b" class="outline-2">
+<h2 id="orgc65395b">Minibuffer</h2>
+<div class="outline-text-2" id="text-orgc65395b">
+</div>
+<div id="outline-container-org4f4fd30" class="outline-3">
+<h3 id="org4f4fd30">Minibuffer 也是 buffer</h3>
+<div class="outline-text-3" id="text-org4f4fd30">
+<p>
+buffer 中的许多操作也可以在 minibuffer 中使用<br />
+</p>
+
+<p>
+换行 <code>C-q C-j</code><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ab7d25" class="outline-3">
+<h3 id="org9ab7d25">Minibuffer 不一定是 buffer</h3>
+<div class="outline-text-3" id="text-org9ab7d25">
+<p>
+当用于显示消息时, 其被称作 EchoArea.<br />
+</p>
+
+<p>
+(message "call me echo area")<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2282d5" class="outline-3">
+<h3 id="orge2282d5">自动补全</h3>
+<div class="outline-text-3" id="text-orge2282d5">
+<p>
+IDO - Interactively DO things<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbb986d6" class="outline-2">
+<h2 id="orgbb986d6">BDD</h2>
+<div class="outline-text-2" id="text-orgbb986d6">
+<p>
+Behavior-driven development  行为驱动开发<br />
+</p>
+</div>
+
+<div id="outline-container-orgce9909a" class="outline-3">
+<h3 id="orgce9909a">Emacs lisp 中的 BDD</h3>
+<div class="outline-text-3" id="text-orgce9909a">
+<ul class="org-ul">
+<li>ecukes <a href="https://github.com/ecukes/ecukes">https://github.com/ecukes/ecukes</a><br /></li>
+<li>espuds <a href="https://github.com/ecukes/espuds">https://github.com/ecukes/espuds</a><br /></li>
+<li>eask   <a href="https://github.com/emacs-eask">https://github.com/emacs-eask</a><br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd912f91" class="outline-3">
+<h3 id="orgd912f91">配置环境</h3>
+<div class="outline-text-3" id="text-orgd912f91">
+</div>
+<div id="outline-container-orgf19a02e" class="outline-4">
+<h4 id="orgf19a02e">安装 eask</h4>
+<div class="outline-text-4" id="text-orgf19a02e">
+<div class="org-src-container">
+<pre class="src src-shell">yarn global add emacs-eask/cli
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5aaf4b2" class="outline-4">
+<h4 id="org5aaf4b2">初始化 eask</h4>
+<div class="outline-text-4" id="text-org5aaf4b2">
+<div class="org-src-container">
+<pre class="src src-shell">eask init
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org89205bc" class="outline-4">
+<h4 id="org89205bc">添加 ecukes 和 espuds 的依赖</h4>
+<div class="outline-text-4" id="text-org89205bc">
+</div>
+</div>
+
+<div id="outline-container-orgfd8706e" class="outline-4">
+<h4 id="orgfd8706e">初始化测试文件</h4>
+<div class="outline-text-4" id="text-orgfd8706e">
+<div class="org-src-container">
+<pre class="src src-shell">eask exec ecukes new
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d758fb" class="outline-3">
+<h3 id="org9d758fb">编写测试和定义步骤</h3>
+<div class="outline-text-3" id="text-org9d758fb">
+</div>
+<div id="outline-container-org7064303" class="outline-4">
+<h4 id="org7064303">编写测试</h4>
+<div class="outline-text-4" id="text-org7064303">
+<div class="org-src-container">
+<pre class="src src-feature">Feature: Emacs
+
+  Scenario: OpenConfigFile
+    Given I am in buffer "*scratch*"
+    When I press "C-c I"
+    Then I should be in buffer "config.org"
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge78b73a" class="outline-4">
+<h4 id="orge78b73a">定义步骤</h4>
+<div class="outline-text-4" id="text-orge78b73a">
+<p>
+<a href="https://github.com/ecukes/espuds/blob/master/espuds.el#L131-L143">https://github.com/ecukes/espuds/blob/master/espuds.el#L131-L143</a><br />
+</p>
+
+<p>
+<a href="https://github.com/ecukes/espuds/blob/master/espuds.el#L290-L291">https://github.com/ecukes/espuds/blob/master/espuds.el#L290-L291</a><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2177e6" class="outline-4">
+<h4 id="orge2177e6">执行测试</h4>
+<div class="outline-text-4" id="text-orge2177e6">
+<div class="org-src-container">
+<pre class="src src-shell">eask run test
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1042689" class="outline-2">
+<h2 id="org1042689">Elegant Markup 标记</h2>
+<div class="outline-text-2" id="text-org1042689">
+</div>
+<div id="outline-container-org65a8619" class="outline-3">
+<h3 id="org65a8619">插入同级别 heading 标题</h3>
+<div class="outline-text-3" id="text-org65a8619">
+<p>
+<code>C-RET</code> 在当前标题以及所有内容之后插入一个同级新标题<br />
+<code>M-RET</code> 在当前标题或内容后直接插入一个同级新标题<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org874183e" class="outline-3">
+<h3 id="org874183e">调整和递归跳转标题 heading 层级</h3>
+<div class="outline-text-3" id="text-org874183e">
+<p>
+<code>M-&lt;LEFT&gt;</code> 和 <code>M-&lt;RIGHT&gt;</code><br />
+</p>
+
+<p>
+<code>M-S-&lt;LEFT&gt;</code> 和 <code>M-S-&lt;RIGHT&gt;</code><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org046c180" class="outline-3">
+<h3 id="org046c180">移动标题 heading</h3>
+<div class="outline-text-3" id="text-org046c180">
+<p>
+<code>M-&lt;UP&gt;</code> 和 <code>M-&lt;DOWN&gt;</code><br />
+</p>
+
+<p>
+连带着标题以及内容移动<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4842f31" class="outline-3">
+<h3 id="org4842f31">列表</h3>
+<div class="outline-text-3" id="text-org4842f31">
+<dl class="org-dl">
+<dt>无序列表</dt><dd>使用 + 或 - 开头<br /></dd>
+<dt>有序列表</dt><dd><p>
+使用 1. 或 1) 开头<br />
+</p>
+
+<p>
+<code>M-RET</code> 会自动插入列表新项<br />
+</p></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgd087c98" class="outline-3">
+<h3 id="orgd087c98">块</h3>
+<div class="outline-text-3" id="text-orgd087c98">
+<p>
+<code>#+begin_xxx ... #+end_xxx</code><br />
+</p>
+
+<ul class="org-ul">
+<li>src<br /></li>
+<li>example<br /></li>
+<li>quote<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org701bcd1" class="outline-4">
+<h4 id="org701bcd1">快速输入块</h4>
+<div class="outline-text-4" id="text-org701bcd1">
+<p>
+快捷键 <code>C-c C-,</code> 加上对应字母<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org98fbd3e" class="outline-3">
+<h3 id="org98fbd3e">字体</h3>
+<div class="outline-text-3" id="text-org98fbd3e">
+<ul class="org-ul">
+<li><code>*粗体*</code><br /></li>
+<li><code>/斜体/</code><br /></li>
+<li><code>+删除线+</code><br /></li>
+<li><code>_下划线_</code><br /></li>
+</ul>
+
+<p>
+<b>hello</b><br />
+<i>hello</i><br />
+<del>hello</del><br />
+<span class="underline">hello</span><br />
+</p>
+</div>
+
+<div id="outline-container-orga691531" class="outline-4">
+<h4 id="orga691531">快速添加字体</h4>
+<div class="outline-text-4" id="text-orga691531">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package wrap-region
+  :straight t
+  :config
+  (wrap-region-add-wrappers
+   '(("*" "*" nil org-mode)
+     ("~" "~" nil org-mode)
+     ("/" "/" nil org-mode)
+     ("_" "_" nil org-mode)))
+  (add-hook 'org-mode-hook 'wrap-region-mode))
+</pre>
+</div>
+
+<p>
+选中需要包围的词 输入 <code>*</code> 或者其他, 就会在前后添加<br />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb6d037c" class="outline-2">
+<h2 id="orgb6d037c">Structured Editing</h2>
+<div class="outline-text-2" id="text-orgb6d037c">
+</div>
+<div id="outline-container-orge848664" class="outline-3">
+<h3 id="orge848664">展开/隐藏节点</h3>
+<div class="outline-text-3" id="text-orge848664">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Key Binding</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">org-cycle</td>
+<td class="org-left">TAB</td>
+<td class="org-left">循环切换节点的可见性</td>
+</tr>
+
+<tr>
+<td class="org-left">org-shifttab</td>
+<td class="org-left">S-TAB</td>
+<td class="org-left">全局切换节点的可见性</td>
+</tr>
+
+<tr>
+<td class="org-left">org-show-branches</td>
+<td class="org-left">C-c C-k</td>
+<td class="org-left">隐藏当前节点的内容，只保留标题（任意位置）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-orgcbfd150" class="outline-3">
+<h3 id="orgcbfd150">设置默认的可见性</h3>
+<div class="outline-text-3" id="text-orgcbfd150">
+<pre class="example">
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: show2levels
+#+STARTUP: show3levels
+#+STARTUP: show4levels
+#+STARTUP: show5levels
+#+STARTUP: showeverything
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orge9109e0" class="outline-3">
+<h3 id="orge9109e0">移动</h3>
+<div class="outline-text-3" id="text-orge9109e0">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Function</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">C-c C-n</td>
+<td class="org-left">org-forward-heading-same-level</td>
+<td class="org-left">移动到同级别的下一个标题</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-p</td>
+<td class="org-left">org-backward-heading-same-level</td>
+<td class="org-left">移动到同级别的上一个标题</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-f</td>
+<td class="org-left">org-next-visible-heading</td>
+<td class="org-left">移动到下一个可见标题</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-b</td>
+<td class="org-left">org-previous-visible-heading</td>
+<td class="org-left">移动到上一个可见标题</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-u</td>
+<td class="org-left">org-up-element</td>
+<td class="org-left">移动到更高级别的标题</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-e</td>
+<td class="org-left">org-end-of-subtree</td>
+<td class="org-left">移动到当前子树的末尾</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c C-a</td>
+<td class="org-left">org-beginning-of-subtree</td>
+<td class="org-left">移动到当前子树的开头</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org5ac268c" class="outline-3">
+<h3 id="org5ac268c">搜索</h3>
+<div class="outline-text-3" id="text-org5ac268c">
+<p>
+<code>C-c /</code> 然后选择匹配的方式。<br />
+</p>
+
+<p>
+因为 Org mode 可能会隐藏部分内容的特性，它有自己的搜索方法。<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org34d438f" class="outline-3">
+<h3 id="org34d438f">列表</h3>
+<div class="outline-text-3" id="text-org34d438f">
+<p>
+先全部选中<br />
+<code>C-c *</code> 把列表转换为标题<br />
+</p>
+
+<p>
+<code>C-c ^</code> 排序<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org133eddc" class="outline-2">
+<h2 id="org133eddc">表格 table</h2>
+<div class="outline-text-2" id="text-org133eddc">
+</div>
+<div id="outline-container-org68eea43" class="outline-3">
+<h3 id="org68eea43">创建新的空白表格</h3>
+<div class="outline-text-3" id="text-org68eea43">
+<p>
+<code>org-table-create</code> 然后输入列和行数<br />
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgb47ace7" class="outline-3">
+<h3 id="orgb47ace7">将 region 转换为表格</h3>
+<div class="outline-text-3" id="text-orgb47ace7">
+<p>
+选中后 <code>C-c |</code> 调用 <code>org-table-create-or-convert-from-region</code><br />
+</p>
+
+<p>
+aaa bbb ccc<br />
+ddd eee fff<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1e36c43" class="outline-3">
+<h3 id="org1e36c43">手动快速创建表格头</h3>
+<div class="outline-text-3" id="text-org1e36c43">
+<pre class="example">
+| Name | Phone | Age |
+|-
+</pre>
+
+<p>
+以上样子在 <code>-</code> 后按 tab 自动展开<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09f54ee" class="outline-3">
+<h3 id="org09f54ee">列和行编辑</h3>
+<div class="outline-text-3" id="text-org09f54ee">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Function</th>
+<th scope="col" class="org-left">Chinese Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">M-S-LEFT</td>
+<td class="org-left">org-table-delete-column</td>
+<td class="org-left">删除当前列</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c RET</td>
+<td class="org-left">org-table-insert-row</td>
+<td class="org-left">在当前位置插入新行</td>
+</tr>
+
+<tr>
+<td class="org-left">M-S-LEFT</td>
+<td class="org-left">org-table-move-column-left</td>
+<td class="org-left">将当前列向左移动</td>
+</tr>
+
+<tr>
+<td class="org-left">M-S-RIGHT</td>
+<td class="org-left">org-table-move-column-right</td>
+<td class="org-left">将当前列向右移动</td>
+</tr>
+
+<tr>
+<td class="org-left">M-DOWN</td>
+<td class="org-left">org-table-move-row-down</td>
+<td class="org-left">将当前行向下移动</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c +</td>
+<td class="org-left">org-table-sum</td>
+<td class="org-left">对当前列中的值求和</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c *</td>
+<td class="org-left">org-table-multiply</td>
+<td class="org-left">将当前列中的值乘以一个因子</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c =</td>
+<td class="org-left">org-table-eval-formula</td>
+<td class="org-left">在当前单元格或区域中计算公式</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c ^</td>
+<td class="org-left">org-table-sort-lines</td>
+<td class="org-left">按当前列中的值对表格进行排序</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c {</td>
+<td class="org-left">org-table-toggle-formula-debugger</td>
+<td class="org-left">切换当前表格的公式调试器</td>
+</tr>
+
+<tr>
+<td class="org-left">C-c }</td>
+<td class="org-left">org-table-toggle-coordinate-overlays</td>
+<td class="org-left">切换当前表格的坐标覆盖层</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">部件</th>
+<th scope="col" class="org-left">型号</th>
+<th scope="col" class="org-right">价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">CPU</td>
+<td class="org-left">1249F</td>
+<td class="org-right">924</td>
+</tr>
+
+<tr>
+<td class="org-left">主板</td>
+<td class="org-left">8760m</td>
+<td class="org-right">917</td>
+</tr>
+
+<tr>
+<td class="org-left">散热</td>
+<td class="org-left">E3</td>
+<td class="org-right">73</td>
+</tr>
+
+<tr>
+<td class="org-left">显卡</td>
+<td class="org-left">3060ti</td>
+<td class="org-right">3094</td>
+</tr>
+
+<tr>
+<td class="org-left">内存</td>
+<td class="org-left">8G * 2</td>
+<td class="org-right">259</td>
+</tr>
+
+<tr>
+<td class="org-left">硬盘</td>
+<td class="org-left">m2 1t</td>
+<td class="org-right">359</td>
+</tr>
+
+<tr>
+<td class="org-left">电源</td>
+<td class="org-left">GM550w</td>
+<td class="org-right">213</td>
+</tr>
+
+<tr>
+<td class="org-left">机箱</td>
+<td class="org-left">白色</td>
+<td class="org-right">156</td>
+</tr>
+
+<tr>
+<td class="org-left">总价</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">5995</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div id="outline-container-orgf64c3ec" class="outline-4">
+<h4 id="orgf64c3ec">中文对齐问题</h4>
+<div class="outline-text-4" id="text-orgf64c3ec">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(when (display-graphic-p)
+  (when (eq system-type 'gnu/linux)
+    (setq fonts '("Inconsolata Nerd Font" "LXGW WenKai"))
+    (set-face-attribute 'default nil :font
+			(format "%s:pixelsize=%d" (car fonts) 32))
+    (setq face-font-rescale-alist '(("LXGW WenKai". 1.0))))
+
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+		      (font-spec :family (car (cdr fonts)))))
+  )
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org28bf36e" class="outline-2">
+<h2 id="org28bf36e">代码块</h2>
+<div class="outline-text-2" id="text-org28bf36e">
+</div>
+<div id="outline-container-org7d66def" class="outline-3">
+<h3 id="org7d66def">代码块结构</h3>
+<div class="outline-text-3" id="text-org7d66def">
+</div>
+</div>
+
+<div id="outline-container-orgabf4b9f" class="outline-3">
+<h3 id="orgabf4b9f">设置可以执行的编程语言</h3>
+<div class="outline-text-3" id="text-orgabf4b9f">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)
+   (C . t)
+   (ruby . t)
+   ))
+</pre>
+</div>
+
+<p>
+<code>C-c C-c</code> 执行代码块<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-C">#include &lt;stdio.h&gt;
+int main() {
+  printf("Hello, world!\n");
+  return 0;
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">print("hello world")
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-ruby">def hello(name)
+  "nice to meet you #{name}"
+end
+
+hello(hello_name)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-ruby" id="org8e1a96e">def sayHi(name)
+  "hello #{name}"
+end
+
+sayHi(name)
+</pre>
+</div>
+
+<p>
+;; #+NAME: introduce<br />
+;; #+begin<sub>src</sub> ruby :var target=sayHi(name="Tom") my<sub>name</sub>="Jerry"<br />
+;; "#{target}, my name is #{my<sub>name</sub>}"<br />
+;; #+end<sub>src</sub><br />
+</p>
+
+<p>
+;; #+RESULTS: introduce<br />
+;; : hello Tom, my name is Jerry<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf521f58" class="outline-3">
+<h3 id="orgf521f58">提取源代码到指定文件</h3>
+<div class="outline-text-3" id="text-orgf521f58">
+<p>
+将 org 文件中的代码块导出到单独的源文件中<br />
+</p>
+
+<p>
+<code>C-c C-v t (org-babel-tangle)</code> 提取全部的代码块<br />
+</p>
+
+<p>
+<code>C-c C-v C-t (org-babel-tangle-single-block)</code> 提取当前代码块<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-ruby">puts("Hello, world!")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9587809" class="outline-3">
+<h3 id="org9587809">多个代码块 tanagle 到同一个文件</h3>
+<div class="outline-text-3" id="text-org9587809">
+</div>
+<div id="outline-container-orgcc28e76" class="outline-4">
+<h4 id="orgcc28e76">直接合并</h4>
+<div class="outline-text-4" id="text-orgcc28e76">
+<p>
+追加<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-ruby">puts("Hello, world!")
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-ruby">puts("Goodleby, world!")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org31d39a9" class="outline-4">
+<h4 id="org31d39a9">使用 noweb 来实现嵌套</h4>
+<div class="outline-text-4" id="text-org31d39a9">
+<div class="org-src-container">
+<pre class="src src-ruby" id="orga5fb0d0">puts("Goodbye, world!")
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-ruby">def two_step
+  puts("Hello, world!")
+  puts("Goodbye, world!")
+end
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2023-06-22 Thu 07:41</p>
+<p class="date">Created: 2023-06-23 Fri 09:39</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
