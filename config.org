@@ -742,13 +742,13 @@ ddd eee fff
 #+RESULTS: sayHi
 : hello Peter
 
-#+NAME: introduce
-#+begin_src ruby :var target=sayHi(name="Tom") my_name="Jerry"
-"#{target}, my name is #{my_name}"
-#+end_src
+;; #+NAME: introduce
+;; #+begin_src ruby :var target=sayHi(name="Tom") my_name="Jerry"
+;; "#{target}, my name is #{my_name}"
+;; #+end_src
 
-#+RESULTS: introduce
-: hello Tom, my name is Jerry
+;; #+RESULTS: introduce
+;; : hello Tom, my name is Jerry
 
 ** 提取源代码到指定文件
 
